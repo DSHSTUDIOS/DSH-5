@@ -173,7 +173,7 @@ layout_boxes = {
     "Chassis brake resistor and mounting allowance": slab(11,28,-30.9,-19.7,116,-174,1.4),
     "Isolated headphone feedthrough and cable tail": slab(11.8,10,-23,-12.8,119.48,-156,1.1),
 }
-regulator = cq.importers.importStep(str(root.parent / "pcb" / "models" / "Pololu_S18V20F12.step")).val().translate((58,-206,-30.4))
+regulator = cq.importers.importStep(str(root.parent / "hardware" / "models" / "Pololu_S18V20F12.step")).val().translate((58,-206,-30.4))
 reserved = cq.Assembly(name="DSH-5 Rev D internal parts and fit allowances")
 for name, shape in layout_boxes.items():
     reserved.add(shape,name=name,color=reserve_color)

@@ -1,6 +1,6 @@
 # Rev D enclosure
 
-Open `DSH-5-RevD-Deck-Assembly.step` in Fusion for the assembled enclosure and populated PCB. The separate enclosure, PCB and internal-layout files use the same origin and millimeter units.
+Run `sh restore-cad.sh` from the repository root, then open `DSH-5-RevD-Deck-Assembly.step` in Fusion for the assembled enclosure and populated PCB. The separate enclosure, PCB and internal-layout files use the same origin and millimeter units.
 
 - `DSH-5-RevD-PCB.step` contains the populated board and the corrected control geometry.
 - `DSH-5-RevD-Enclosure.step` contains the chassis, front and rear covers, platter surround, three side buttons, speed seesaw, rear logo inlay and feet.

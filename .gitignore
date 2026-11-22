@@ -4,5 +4,6 @@
 .pio/
 __pycache__/
 cad/meshes/
-studio/studio-preview.png
+assets/studio-preview.png
 *.blend[0-9]
+cad/DSH-5-RevD-Deck-Assembly.step
