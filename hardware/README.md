@@ -20,7 +20,7 @@ The charger is hardware-configured for 3S, 12.60 V and a 1.00 A nominal charge c
 
 ## Firmware and controls
 
-The PlatformIO project and compiled Teensy HEX are in the [firmware directory](../firmware). The build used Teensyduino 1.59 and Arm GCC 13.3.1. The project requires at least 8 MB of installed PSRAM on the Teensy. For this build, put a stereo 16-bit, 44.1 kHz PCM `BACKING.WAV` on microSD. Playback loops the first 30 seconds. `SCRATCH.WAV` is optional. REC captures up to eight seconds from line input, saves an incremented WAV and assigns the take to the scratch layer.
+The [firmware guide](../firmware/README.md) links the compiled Teensy HEX and explains how to build and flash it. The build used Teensyduino 1.59 and Arm GCC 13.3.1. The project requires at least 8 MB of installed PSRAM on the Teensy. For this build, put a stereo 16-bit, 44.1 kHz PCM `BACKING.WAV` on microSD. Playback loops the first 30 seconds. `SCRATCH.WAV` is optional. REC captures up to eight seconds from line input, saves an incremented WAV and assigns the take to the scratch layer.
 
 | Control | Operation implemented in the build |
 | --- | --- |
@@ -34,9 +34,9 @@ The PlatformIO project and compiled Teensy HEX are in the [firmware directory](.
 
 ## Files and remaining verification
 
-The KiCad project contains the routed board and schematic. The [fabrication folder](fabrication/) holds prototype Gerbers, drills, a solder paste layer for each side, placement coordinates and a board test netlist. The BOM includes the separate motor and audio modules. Some passive entries are procurement specifications. Use the specified rating, dielectric, tolerance and footprint and check DC bias for charger capacitors when choosing the exact supplier part.
+The KiCad project contains the routed board and schematic. The [manufacturing folder](manufacturing/) holds prototype Gerbers, drills, a solder paste layer for each side, placement coordinates and a board test netlist. The BOM includes the separate motor and audio modules. Some passive entries are procurement specifications. Use the specified rating, dielectric, tolerance and footprint and check DC bias for charger capacitors when choosing the exact supplier part.
 
-The [populated PCB STEP](../cad/DSH-5-RevD-PCB.step) uses the original board origin and includes the motor, platter, switch caps, fader, knob, OLED, USB-C and audio ports. The regulator, Teensy and audio shield stack and any harnesses require a physical fit check. The chassis-mounted 12 V regulator's vendor STEP is included separately in models. The [enclosure assembly](../cad) includes component reserves and connector openings. Verify the selected battery, cable bends, headphone and microSD access, and linkage travel with the prototype.
+The [populated PCB STEP](../cad/DSH-5-RevD-PCB.step) uses the original board origin and includes the motor, platter, switch caps, fader, knob, OLED, USB-C and audio ports. The regulator, Teensy and audio shield stack and any harnesses require a physical fit check. The chassis-mounted 12 V regulator's vendor STEP is included separately in [the local KiCad model library](kicad/models/). The [enclosure assembly](../cad) includes component reserves and connector openings. Verify the selected battery, cable bends, headphone and microSD access, and linkage travel with the prototype.
 
 Computer verification covers the schematic, routing, schematic-to-board parity, and the firmware build. Production release requires qualification on assembled hardware. Measure USB-PD attach and charge cutoff with the selected protected pack, charging during playback, both rails at motor startup and stall, reverse motor energy under forced motion, bidirectional scratch latency, recording and shutdown recovery, audio noise, and actual control and connector fit. Test the documented current and thermal limits in the assembled unit. Rev D is a prototype build package pending these checks.
 

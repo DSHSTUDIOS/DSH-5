@@ -1,9 +1,8 @@
 #pragma once
 #include <Audio.h>
 
-struct StereoFrame { int16_t left, right; };
-constexpr uint32_t BackingCapacity = 44100u * 30;
-constexpr uint32_t ScratchCapacity = 44100u * 8;
+#include "LoopAudio.h"
+
 extern StereoFrame backing[BackingCapacity], scratch[ScratchCapacity];
 
 class DeckAudio : public AudioStream {
@@ -25,7 +24,7 @@ public:
         AudioNoInterrupts();
         captured = 0;
         scratchLength = 0;
-        scratchPosition = 0;
+        scratchLoop.reset();
         recording = true;
         AudioInterrupts();
     }
@@ -37,6 +36,8 @@ public:
         AudioInterrupts();
         return captured;
     }
+
+    bool hasScratchSource() const { return scratchLength || backingLength; }
 
     volatile bool recording = false;
     volatile uint32_t captured = 0;
@@ -65,11 +66,13 @@ public:
         float backTarget = c.playing ? (c.scratching ? 1-c.mix : 1) * c.level : 0;
         float scratchTarget = c.scratching ? c.mix * c.level *
                               constrain(fabsf(c.scratchRate)*20.f,0.f,1.f) : 0;
+        const StereoFrame* scratchSource = scratchLength ? scratch : backing;
+        const uint32_t scratchFrames = scratchLength ? scratchLength : backingLength;
         for (unsigned i=0; i<AUDIO_BLOCK_SAMPLES; ++i) {
             gainBack += (backTarget-gainBack) * .003f;
             gainScratch += (scratchTarget-gainScratch) * .004f;
-            StereoFrame a = sample(backing, backingLength, backPosition, c.playing ? c.rate : 0);
-            StereoFrame b = sample(scratch, scratchLength, scratchPosition, c.scratching ? c.scratchRate : 0);
+            StereoFrame a = backingLoop.sample(backing, backingLength, c.playing ? c.rate : 0);
+            StereoFrame b = scratchLoop.sample(scratchSource, scratchFrames, c.scratching ? c.scratchRate : 0);
             outL->data[i] = static_cast<int16_t>(constrain(a.left*gainBack+b.left*gainScratch,-32768.f,32767.f));
             outR->data[i] = static_cast<int16_t>(constrain(a.right*gainBack+b.right*gainScratch,-32768.f,32767.f));
         }
@@ -80,19 +83,6 @@ public:
 private:
     audio_block_t* input[2];
     Controls controls;
-    float gainBack=0, gainScratch=0, backPosition=0, scratchPosition=0;
-
-    static StereoFrame sample(const StereoFrame* audio, uint32_t frames, float& position, float advance) {
-        if (!frames) return {};
-        unsigned i = static_cast<unsigned>(position);
-        unsigned next = i+1 == frames ? 0 : i+1;
-        float bias = position - i;
-        StereoFrame a = audio[i], b = audio[next];
-        position += advance;
-        if (position >= frames) position = fmodf(position,static_cast<float>(frames));
-        if (position < 0) position += frames;
-        if (position >= frames) position = 0;
-        return {static_cast<int16_t>(a.left+(b.left-a.left)*bias),
-                static_cast<int16_t>(a.right+(b.right-a.right)*bias)};
-    }
+    LoopAudio backingLoop, scratchLoop;
+    float gainBack = 0, gainScratch = 0;
 };

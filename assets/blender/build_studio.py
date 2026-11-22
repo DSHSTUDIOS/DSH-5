@@ -7,7 +7,7 @@ from mathutils import Matrix, Vector
 bpy.ops.wm.read_factory_settings(use_empty=True)
 scene = bpy.context.scene
 output = Path(__file__).resolve().parent
-mesh_dir = output.parent / "cad" / "meshes"
+mesh_dir = output.parent.parent / "cad" / "meshes"
 draft = os.environ.get("DSH_PREVIEW") == "1"
 
 def material(name, color, roughness, metal=0, emission=0, grain=False):
