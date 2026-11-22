@@ -34,7 +34,7 @@ The [firmware guide](../firmware/README.md) links the compiled Teensy HEX and ex
 
 ## Files and remaining verification
 
-The KiCad project contains the routed board and schematic. The [manufacturing folder](manufacturing/) holds prototype Gerbers, drills, a solder paste layer for each side, placement coordinates and a board test netlist. The BOM includes the separate motor and audio modules. Some passive entries are procurement specifications. Use the specified rating, dielectric, tolerance and footprint and check DC bias for charger capacitors when choosing the exact supplier part.
+The KiCad project contains the routed board and schematic. The [manufacturing folder](manufacturing/) holds prototype Gerbers, drills, a solder paste layer for each side, placement coordinates and a board test netlist. Use the [turnkey quote files](manufacturing/pcba/) for both-side SMT and manual assembly. The [priced BOM](../BOM.csv) includes the separate motor and audio modules. Some passive entries are procurement specifications. Use the specified rating, dielectric, tolerance and footprint and check DC bias for charger capacitors when choosing the exact supplier part.
 
 The [populated PCB STEP](../cad/DSH-5-RevD-PCB.step) uses the original board origin and includes the motor, platter, switch caps, fader, knob, OLED, USB-C and audio ports. The regulator, Teensy and audio shield stack and any harnesses require a physical fit check. The chassis-mounted 12 V regulator's vendor STEP is included separately in [the local KiCad model library](kicad/models/). The [enclosure assembly](../cad) includes component reserves and connector openings. Verify the selected battery, cable bends, headphone and microSD access, and linkage travel with the prototype.
 

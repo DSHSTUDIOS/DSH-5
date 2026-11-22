@@ -1,0 +1,67 @@
+Designator,Quantity,MPN or sourcing specification,Footprint,Assembly method,Side,Assembly notes
+C1,1,Panasonic EEU-FR1V471,Capacitor_THT:CP_Radial_D10.0mm_P5.00mm,Through-hole,top,Polarity and body clearance.
+"C10, C11",2,330 pF 50 V C0G ±5%,Capacitor_SMD:C_0603_1608Metric,SMT,top,Assembler may source to the listed requirements.
+C12,1,1 nF 50 V C0G ±5%,Capacitor_SMD:C_0603_1608Metric,SMT,top,Assembler may source to the listed requirements.
+"C13, C14",2,10 µF ≥10 V X5R/X7R ±20%,Capacitor_SMD:C_0805_2012Metric,SMT,top,Assembler may source to the listed requirements.
+"C15, C22",2,4.7 µF ≥10 V X5R/X7R ±20%,Capacitor_SMD:C_0805_2012Metric,SMT,top,Assembler may source to the listed requirements.
+C16,1,4.7 µF ≥35 V X5R/X7R ±20%,Capacitor_SMD:C_0805_2012Metric,SMT,top,Assembler may source to the listed requirements.
+C17,1,10 nF ≥50 V X7R ±10%,Capacitor_SMD:C_0603_1608Metric,SMT,top,Assembler may source to the listed requirements.
+"C18, C19",2,22 µF ≥35 V X5R/X7R ±20%,Capacitor_SMD:C_1206_3216Metric,SMT,top,Check effective capacitance at operating voltage for charger bulk capacitors.
+"C2, C24, C25, C26, C42",5,100 nF ≥50 V X7R ±10%,Capacitor_SMD:C_0603_1608Metric,SMT,top,Assembler may source to the listed requirements.
+"C20, C21",2,47 nF ≥25 V X7R ±10%,Capacitor_SMD:C_0603_1608Metric,SMT,top,Assembler may source to the listed requirements.
+C23,1,1 nF ≥50 V C0G/X7R ±10%,Capacitor_SMD:C_0402_1005Metric,SMT,top,Assembler may source to the listed requirements.
+"C27, C28, C29, C30, C31, C32, C33, C34, C35, C36, C37, C38",12,10 µF ≥35 V X5R/X7R ±20%,Capacitor_SMD:C_1206_3216Metric,SMT,top,Check effective capacitance at operating voltage for charger bulk capacitors.
+"C3, C4, C5, C6",4,100 nF ≥50 V X7R ±10%,Capacitor_SMD:C_0805_2012Metric,SMT,top,Assembler may source to the listed requirements.
+"C43, C46",2,100 nF ≥25 V X7R ±10%,Capacitor_SMD:C_0603_1608Metric,SMT,top,Assembler may source to the listed requirements.
+C44,1,330 nF ≥25 V X7R ±10%,Capacitor_SMD:C_0603_1608Metric,SMT,top,Assembler may source to the listed requirements.
+"D1, D10",2,Littelfuse SMBJ16A,Diode_SMD:D_SMB,SMT,top,
+D4,1,Vishay SSC54-E3/57T,Diode_SMD:D_SMC,SMT,top,Proposed procurement correction for the original SS54-E3/57T text. Confirm DO-214AB SMC and cathode direction before release.
+D5,1,Diodes Inc. BZT52C10-7-F,Diode_SMD:D_SOD-123,SMT,top,
+"D6, D7, D8, D9",4,"Nexperia PESD5V0S1BA,115",Diode_SMD:D_SOD-323,SMT,top,
+DS1,1,Adafruit 326,DSH5_Carrier:Adafruit_326_Direct,Manual module,top,"Confirm the current module revision on the 8-pin carrier footprint, spacer height, I2C mode and 0x3D address."
+F1,1,Littelfuse 0466002.NR,Fuse:Fuse_1206_3216Metric,SMT,top,
+F2,1,Littelfuse 0466003.NR,Fuse:Fuse_1206_3216Metric,SMT,top,
+J1,1,GCT USB4125-GF-A,Connector_USB:USB_C_Receptacle_GCT_USB4125-xx-x_6P_TopMnt_Horizontal,SMT,top,Reflow signal contacts and verify shell anchor joints.
+"J11, J12",2,Same Sky SJ-3523-SMT-TR,DSH5_Carrier:Line_Jack_SJ3523SMT,SMT,bottom,Bottom-side port. Confirm position and mating direction in DFM.
+J17,1,JST B3B-PH-K-S(LF)(SN),Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical,Through-hole,top,
+"J18, J4",2,JST B2P-VH(LF)(SN),Connector_JST:JST_VH_B2P-VH_1x02_P3.96mm_Vertical,Through-hole,top,
+J2,1,JST B2P-VH(LF)(SN),DSH5_Carrier:Battery_VH_2Pin_Edge,Through-hole,top,
+J3,1,JST B2B-PH-K-S(LF)(SN),Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,Through-hole,top,
+"J6, J7",2,JST B3B-XH-A(LF)(SN),Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical,Through-hole,bottom,
+J8,1,JST B3B-XH-A(LF)(SN),Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical,Through-hole,top,
+L1,1,Coilcraft XAL6060-222MEC,Inductor_SMD:L_Coilcraft_XAL6060-XXX,SMT,top,
+Q1,1,Infineon IRLML6344TRPBF,Package_TO_SOT_SMD:SOT-23,SMT,top,
+Q2,1,Diodes Inc. DMP3010LK3-13,Package_TO_SOT_SMD:TO-252-3_TabPin2,SMT,top,
+Q3,1,Diodes Inc. 2N7002-7-F,Package_TO_SOT_SMD:SOT-23,SMT,top,
+R1,1,120 Ω ±1%,Resistor_SMD:R_0805_2012Metric,SMT,top,"Assembler may source by value, tolerance and listed package."
+R10,1,82.5 kΩ ±1%,Resistor_SMD:R_0603_1608Metric,SMT,top,"Assembler may source by value, tolerance and listed package."
+"R11, R13, R25, R26, R27, R31, R40, R41",8,10 kΩ ±1%,Resistor_SMD:R_0603_1608Metric,SMT,top,"Assembler may source by value, tolerance and listed package."
+R12,1,200 kΩ ±1%,Resistor_SMD:R_0603_1608Metric,SMT,top,"Assembler may source by value, tolerance and listed package."
+R14,1,69.8 kΩ ±1%,Resistor_SMD:R_0603_1608Metric,SMT,top,"Assembler may source by value, tolerance and listed package."
+"R15, R23",2,30.1 kΩ ±1%,Resistor_SMD:R_0603_1608Metric,SMT,top,"Assembler may source by value, tolerance and listed package."
+"R16, R21, R46, R47",4,100 kΩ ±1%,Resistor_SMD:R_0603_1608Metric,SMT,top,"Assembler may source by value, tolerance and listed package."
+R17,1,13 kΩ ±1%,Resistor_SMD:R_0603_1608Metric,SMT,top,"Assembler may source by value, tolerance and listed package."
+R18,1,0 Ω jumper,Resistor_SMD:R_0603_1608Metric,SMT,top,"Assembler may source by value, tolerance and listed package."
+R19,1,13.7 kΩ ±1%,Resistor_SMD:R_0603_1608Metric,SMT,top,"Assembler may source by value, tolerance and listed package."
+R20,1,162 kΩ ±1%,Resistor_SMD:R_0603_1608Metric,SMT,top,"Assembler may source by value, tolerance and listed package."
+R22,1,5.23 kΩ ±1%,Resistor_SMD:R_0603_1608Metric,SMT,top,"Assembler may source by value, tolerance and listed package."
+"R24, R42, R43, R44, R45",5,100 Ω ±1%,Resistor_SMD:R_0603_1608Metric,SMT,top,"Assembler may source by value, tolerance and listed package."
+"R3, R4",2,1 kΩ ±1%,Resistor_SMD:R_0805_2012Metric,SMT,top,"Assembler may source by value, tolerance and listed package."
+R30,1,49.9 kΩ ±1%,Resistor_SMD:R_0603_1608Metric,SMT,top,"Assembler may source by value, tolerance and listed package."
+R32,1,1 MΩ ±1%,Resistor_SMD:R_0603_1608Metric,SMT,top,"Assembler may source by value, tolerance and listed package."
+"R33, R34",2,2.2 kΩ ±1%,Resistor_SMD:R_0603_1608Metric,SMT,top,"Assembler may source by value, tolerance and listed package."
+R48,1,24.9 kΩ ±1%,Resistor_SMD:R_0603_1608Metric,SMT,top,"Assembler may source by value, tolerance and listed package."
+R5,1,10 kΩ ±1%,Resistor_SMD:R_0805_2012Metric,SMT,top,"Assembler may source by value, tolerance and listed package."
+RV1,1,Bourns PTA3043-2010CPB103,Potentiometer_THT:Potentiometer_Bourns_PTA3043_Single_Slide,Through-hole,top,30 mm linear crossfader. Check orientation and free travel.
+RV2,1,Bourns PTV09A-1020F-B103,Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical,Through-hole,top,"Quote the specified 10 kΩ linear vertical configuration. Confirm exact sourceable SKU, footprint and shaft fit before substituting."
+"SW1, SW2, SW3, SW4, SW5",5,C&K PTS645VL39-2 LFS,Button_Switch_THT:SW_Tactile_SPST_Angled_PTS645Vx39-2LFS,Through-hole,top,Fit five side-actuated switches with actuators outward.
+U1,1,Teensy 4.1 / Adafruit 4622,DSH5_Carrier:Teensy41_Sockets_2x24,Manual module,bottom,"Module price only. Sockets, header pins and PSRAM costed separately. Mount below the board and verify USB isolation for programming."
+U10,1,ADI LTC2954ITS8-1#TRMPBF,Package_TO_SOT_SMD:TSOT-23-8,SMT,top,
+U11,1,TI TLV1701AIDBVR,Package_TO_SOT_SMD:SOT-23-5,SMT,top,
+U12,1,TI TL431AIDBZR,Package_TO_SOT_SMD:SOT-23,SMT,top,
+U3,1,TI TCAN1042HGVDR,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,SMT,top,
+U4,1,Pololu 2858 / D24V22F5,DSH5_Carrier:Pololu_D24V22F5,Manual module,bottom,Install on 5-pin short header and verify signal alignment.
+U6,1,JST B4P-VH(LF)(SN),Connector_JST:JST_VH_B4P-VH_1x04_P3.96mm_Vertical,Through-hole,top,Main-board header. The separate 12 V module is PWR1.
+U7,1,TI TPS25730DREFR,Package_DFN_QFN:Texas_REF0038A_WQFN-38-2EP_6x4mm_P0.4,SMT,top,WQFN placement and first-article PD attach check.
+U8,1,TI TPS22810DBVR,Package_TO_SOT_SMD:SOT-23-6,SMT,top,
+U9,1,TI BQ25798RQMR,Package_DFN_QFN:Texas_RQM0029A_VQFN-29_4x4mm_P0.4mm,SMT,top,VQFN placement and first-article charge checks.

@@ -30,7 +30,7 @@ I wanted a DJ deck I could hold in one hand. The DSH-5 has a motorized platter f
 | What | Where |
 | --- | --- |
 | PCB | [KiCad project](hardware/kicad/DSH-5-PCB-RevD.kicad_pro) · [board](hardware/kicad/DSH-5-PCB-RevD.kicad_pcb) · [schematic](hardware/kicad/DSH-5-PCB-RevD.kicad_sch) |
-| Fabrication | [Gerbers and drills](hardware/manufacturing/DSH-5-RevD-Gerbers.zip) · [placement file](hardware/manufacturing/SMD-placement.csv) · [parts list](BOM.csv) |
+| Fabrication and assembly | [Gerbers and drills](hardware/manufacturing/DSH-5-RevD-Gerbers.zip) · [turnkey quote files](hardware/manufacturing/pcba/) · [priced BOM](BOM.csv) |
 | Enclosure | [Enclosure STEP](cad/DSH-5-RevD-Enclosure.step) · [populated PCB STEP](cad/DSH-5-RevD-PCB.step) · [full assembly and fit notes](cad/README.md) |
 | Wiring and checks | [Assembly notes](hardware/README.md) · [ERC and DRC reports](hardware/verification/) |
 | Firmware | [Build and flash instructions](firmware/README.md) · [source](firmware/src/) · [HEX](firmware/hex/DSH-5-RevD-Teensy41.hex) · [build settings](platformio.ini) |

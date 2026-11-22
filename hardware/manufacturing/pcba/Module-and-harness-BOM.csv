@@ -1,0 +1,12 @@
+Item,Qty,Part or specification,Assembly notes
+DS1,1,Adafruit 326,"Confirm the current module revision on the 8-pin carrier footprint, spacer height, I2C mode and 0x3D address."
+U1,1,Teensy 4.1 / Adafruit 4622,"Module price only. Sockets, header pins and PSRAM costed separately. Mount below the board and verify USB isolation for programming."
+U4,1,Pololu 2858 / D24V22F5,Install on 5-pin short header and verify signal alignment.
+U2,1,PJRC Audio Adapter Rev D2,Install headers and stack with verified clearance. Quote line-in and line-out harnesses.
+PSRAM1,1,SparkFun COM-28391 / 8 MB Teensy PSRAM,Solder onto underside of Teensy. Verify 8 MB is detected before stacking.
+U1-SOCKETS,2,"24-position 2.54 mm female socket, single row",Main-board sockets. Confirm height and Teensy stack access.
+U1-PINS,2,"24-position 2.54 mm male pin strip, single row",Solder to unpinned Teensy. Align with main-board sockets.
+U2-HEADERS,2,"14-position 2.54 mm stack header, single row",Install on Audio Adapter. Confirm mating height and orientation from stack drawing.
+DS1-KIT,1,8-pin 2.54 mm header and four fitting spacers,Install under DS1. Use existing included header if it matches ordered height.
+U4-HDR,1,5-position 2.54 mm short interconnect,Use included header if mechanically suitable.
+AUDIO-HARNESS,2,3-way JST XH audio harness,J6/J7 to shield L/GND/R. Ask for shield ends prewired.
