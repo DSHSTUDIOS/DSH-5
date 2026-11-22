@@ -1,0 +1,33 @@
+{
+  "name": "DSH-5 Rev E (ESP32-S3, 16 MB flash, 8 MB PSRAM)",
+  "vendor": "DSH Studios",
+  "url": "https://github.com/DSHSTUDIOS/DSH-5",
+  "frameworks": ["arduino"],
+  "build": {
+    "mcu": "esp32s3",
+    "variant": "esp32s3",
+    "core": "esp32",
+    "f_cpu": "240000000L",
+    "f_flash": "80000000L",
+    "flash_mode": "qio",
+    "arduino": {
+      "ldscript": "esp32s3_out.ld",
+      "partitions": "default_16MB.csv",
+      "memory_type": "qio_opi"
+    },
+    "extra_flags": [
+      "-DBOARD_HAS_PSRAM",
+      "-DARDUINO_USB_MODE=1",
+      "-DARDUINO_RUNNING_CORE=1",
+      "-DARDUINO_EVENT_RUNNING_CORE=1"
+    ]
+  },
+  "upload": {
+    "flash_size": "16MB",
+    "maximum_size": 16777216,
+    "maximum_ram_size": 327680,
+    "protocol": "esptool",
+    "require_upload_port": true,
+    "speed": 460800
+  }
+}

@@ -17,29 +17,26 @@ I wanted a DJ deck I could hold in one hand. The DSH-5 has a motorized platter f
 
 ![Exploded CAD view of the faceplate, populated PCB and enclosure](assets/renders/DSH-5-RevD-Assembly.png)
 
-### Rev D PCB
+### Rev E PCB
 
-![Populated DSH-5 Rev D board in KiCad](assets/renders/DSH-5-RevD-PCB.png)
+[![Populated DSH-5 Rev E board in KiCad](assets/renders/DSH-5-RevE-Board.png)](hardware/rev-e/kicad/DSH-5-PCB-RevE.kicad_pcb)
 
-### Schematic
+## Rev E prototype
 
-[![Rev D schematic](assets/renders/DSH-5-RevD-Schematic.png)](hardware/DSH-5-RevD-Schematic.pdf)
-
-## Making one
+Rev E uses a solder-down ESP32-S3, a bare OLED, and an onboard stereo codec. The main board carries the crossfader, level pot, three side buttons and the two speed-seesaw contacts.
 
 | What | Where |
 | --- | --- |
-| PCB | [KiCad project](hardware/kicad/DSH-5-PCB-RevD.kicad_pro) · [board](hardware/kicad/DSH-5-PCB-RevD.kicad_pcb) · [schematic](hardware/kicad/DSH-5-PCB-RevD.kicad_sch) |
-| Fabrication and assembly | [Gerbers and drills](hardware/manufacturing/DSH-5-RevD-Gerbers.zip) · [turnkey quote files](hardware/manufacturing/pcba/) · [priced BOM](BOM.csv) |
-| Enclosure | [Enclosure STEP](cad/DSH-5-RevD-Enclosure.step) · [populated PCB STEP](cad/DSH-5-RevD-PCB.step) · [full assembly and fit notes](cad/README.md) |
-| Wiring and checks | [Assembly notes](hardware/README.md) · [ERC and DRC reports](hardware/verification/) |
-| Firmware | [Build and flash instructions](firmware/README.md) · [source](firmware/src/) · [HEX](firmware/hex/DSH-5-RevD-Teensy41.hex) · [build settings](platformio.ini) |
-| Studio render | [Blender scene](assets/blender/DSH-5-RevD-Studio.blend) |
+| PCB | [KiCad project](hardware/rev-e/kicad/DSH-5-PCB-RevE.kicad_pro) · [board](hardware/rev-e/kicad/DSH-5-PCB-RevE.kicad_pcb) · [schematic](hardware/rev-e/kicad/DSH-5-PCB-RevE.kicad_sch) |
+| Parts and sourcing | [Full BOM](BOM.csv) · [Fallen BOM](FALLEN-BOM.csv) |
+| Mechanical reference | [Populated PCB STEP](cad/DSH-5-RevE-PCB.step.xz) |
+| Wiring and assembly | [Hardware and turnkey assembly notes](hardware/rev-e/README.md) · [KiCad and firmware reports](hardware/rev-e/checks/) |
+| Firmware | [ESP32-S3 source](firmware/rev-e/src/) · [PlatformIO project](platformio.ini) |
 
-Run `sh restore-cad.sh` to unpack the full assembly STEP, then open it in Fusion. The chassis is 96 × 187 mm and about 66 mm deep including the feet and knob. There’s room reserved for an internal battery, with USB-C PD charging on the main board.
+Run `pio run` from the repository root to build Rev E. Unpack the PCB model with `xz -dk cad/DSH-5-RevE-PCB.step.xz` and open the resulting STEP in Fusion.
 
-## Building the firmware
+KiCad reports zero errors and zero open connections, with two warnings documented in the hardware notes. The firmware builds. Physical fit, charging, audio and the motor still need first-article testing.
 
-Run `pio run` from the repo root. The [firmware guide](firmware/README.md) covers flashing a Teensy 4.1, preparing the microSD card, and recovering an interrupted take.
+## Rev D files
 
-**Status.** This is the Rev D prototype. KiCad checks passed, the firmware built, and the CAD clears the full fader and platter travel. The pictures are renders. Charging, scratching, and final fit still need testing on a physical deck.
+The studio render and enclosure images above show Rev D. Its [enclosure and fit notes](cad/README.md), [KiCad source](hardware/kicad/DSH-5-PCB-RevD.kicad_pro), [turnkey quote files](hardware/manufacturing/pcba/), and [Teensy firmware](firmware/README.md) are available for that revision. The [Rev D BOM](https://github.com/DSHSTUDIOS/DSH-5/blob/5f626b1eb498d4edce1bb6fbd1a963682ae008fc/BOM.csv) is in the prior release commit.

@@ -1,0 +1,131 @@
+<local-path>:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Processing dsh5-rev-e (platform: espressif32@6.12.0; board: dsh5-reve; framework: arduino)
+--------------------------------------------------------------------------------
+<local-path>:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/dsh5-reve.html
+PLATFORM: Espressif 32 (6.12.0) > DSH-5 Rev E (ESP32-S3, 16 MB flash, 8 MB PSRAM)
+HARDWARE: ESP32S3 240MHz, 320KB RAM, 16MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-builtin, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES:
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b
+ - tool-esptoolpy @ 2.40900.250804 (4.9.0)
+ - toolchain-riscv32-esp @ 8.4.0+2021r2-patch5
+ - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 37 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- Adafruit SSD1306 @ 2.5.13
+|-- ACAN2517FD @ 2.1.16
+|-- SD @ 2.0.0
+|-- SPI @ 2.0.0
+|-- Wire @ 2.0.0
+Building in release mode
+Compiling .pio/build/dsh5-rev-e/src/Media.cpp.o
+Compiling .pio/build/dsh5-rev-e/src/main.cpp.o
+Building .pio/build/dsh5-rev-e/bootloader.bin
+Generating partitions .pio/build/dsh5-rev-e/partitions.bin
+esptool.py v4.9.0
+Creating esp32s3 image...
+Merged 1 ELF section
+Successfully created esp32s3 image.
+Compiling .pio/build/dsh5-rev-e/lib6b8/Wire/Wire.cpp.o
+Compiling .pio/build/dsh5-rev-e/lib3ee/SPI/SPI.cpp.o
+Compiling .pio/build/dsh5-rev-e/lib736/Adafruit BusIO/Adafruit_BusIO_Register.cpp.o
+Compiling .pio/build/dsh5-rev-e/lib736/Adafruit BusIO/Adafruit_GenericDevice.cpp.o
+Compiling .pio/build/dsh5-rev-e/lib736/Adafruit BusIO/Adafruit_I2CDevice.cpp.o
+Compiling .pio/build/dsh5-rev-e/lib736/Adafruit BusIO/Adafruit_SPIDevice.cpp.o
+Compiling .pio/build/dsh5-rev-e/libadd/Adafruit GFX Library/Adafruit_GFX.cpp.o
+Compiling .pio/build/dsh5-rev-e/libadd/Adafruit GFX Library/Adafruit_GrayOLED.cpp.o
+Compiling .pio/build/dsh5-rev-e/libadd/Adafruit GFX Library/Adafruit_SPITFT.cpp.o
+Compiling .pio/build/dsh5-rev-e/libadd/Adafruit GFX Library/glcdfont.c.o
+Compiling .pio/build/dsh5-rev-e/lib523/Adafruit SSD1306/Adafruit_SSD1306.cpp.o
+Archiving .pio/build/dsh5-rev-e/lib6b8/libWire.a
+Indexing .pio/build/dsh5-rev-e/lib6b8/libWire.a
+Compiling .pio/build/dsh5-rev-e/liba62/ACAN2517FD/ACAN2517FD.cpp.o
+Archiving .pio/build/dsh5-rev-e/lib3ee/libSPI.a
+Compiling .pio/build/dsh5-rev-e/liba62/ACAN2517FD/ACAN2517FDSettings.cpp.o
+Indexing .pio/build/dsh5-rev-e/lib3ee/libSPI.a
+Compiling .pio/build/dsh5-rev-e/libbf6/FS/FS.cpp.o
+Compiling .pio/build/dsh5-rev-e/libbf6/FS/vfs_api.cpp.o
+Archiving .pio/build/dsh5-rev-e/lib736/libAdafruit BusIO.a
+Indexing .pio/build/dsh5-rev-e/lib736/libAdafruit BusIO.a
+Compiling .pio/build/dsh5-rev-e/lib6d2/SD/SD.cpp.o
+Compiling .pio/build/dsh5-rev-e/lib6d2/SD/sd_diskio.cpp.o
+Compiling .pio/build/dsh5-rev-e/lib6d2/SD/sd_diskio_crc.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/Esp.cpp.o
+Archiving .pio/build/dsh5-rev-e/lib523/libAdafruit SSD1306.a
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/FirmwareMSC.cpp.o
+Indexing .pio/build/dsh5-rev-e/lib523/libAdafruit SSD1306.a
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/FunctionalInterrupt.cpp.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/HWCDC.cpp.o
+Archiving .pio/build/dsh5-rev-e/libadd/libAdafruit GFX Library.a
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/HardwareSerial.cpp.o
+Archiving .pio/build/dsh5-rev-e/liba62/libACAN2517FD.a
+Indexing .pio/build/dsh5-rev-e/libadd/libAdafruit GFX Library.a
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/IPAddress.cpp.o
+Indexing .pio/build/dsh5-rev-e/liba62/libACAN2517FD.a
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/IPv6Address.cpp.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/MD5Builder.cpp.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/Print.cpp.o
+Archiving .pio/build/dsh5-rev-e/libbf6/libFS.a
+Indexing .pio/build/dsh5-rev-e/libbf6/libFS.a
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/Stream.cpp.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/StreamString.cpp.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/Tone.cpp.o
+Archiving .pio/build/dsh5-rev-e/lib6d2/libSD.a
+Indexing .pio/build/dsh5-rev-e/lib6d2/libSD.a
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/USB.cpp.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/USBCDC.cpp.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/USBMSC.cpp.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/WMath.cpp.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/WString.cpp.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/base64.cpp.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/cbuf.cpp.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/esp32-hal-adc.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/esp32-hal-bt.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/esp32-hal-cpu.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/esp32-hal-dac.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/esp32-hal-gpio.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/esp32-hal-i2c-slave.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/esp32-hal-i2c.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/esp32-hal-ledc.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/esp32-hal-matrix.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/esp32-hal-misc.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/esp32-hal-psram.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/esp32-hal-rgb-led.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/esp32-hal-rmt.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/esp32-hal-sigmadelta.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/esp32-hal-spi.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/esp32-hal-time.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/esp32-hal-timer.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/esp32-hal-tinyusb.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/esp32-hal-touch.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/esp32-hal-uart.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/firmware_msc_fat.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/libb64/cdecode.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/libb64/cencode.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/main.cpp.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/stdlib_noniso.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/wiring_pulse.c.o
+Compiling .pio/build/dsh5-rev-e/FrameworkArduino/wiring_shift.c.o
+Archiving .pio/build/dsh5-rev-e/libFrameworkArduino.a
+Indexing .pio/build/dsh5-rev-e/libFrameworkArduino.a
+Linking .pio/build/dsh5-rev-e/firmware.elf
+Retrieving maximum program size .pio/build/dsh5-rev-e/firmware.elf
+Checking size .pio/build/dsh5-rev-e/firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]   6.3% (used 20712 bytes from 327680 bytes)
+Flash: [=         ]   5.9% (used 388065 bytes from 6553600 bytes)
+Building .pio/build/dsh5-rev-e/firmware.bin with action:
+  "$PYTHONEXE" "$OBJCOPY" --chip esp32s3 elf2image --flash_mode ${__get_board_flash_mode(__env__)} --flash_freq ${__get_board_f_image(__env__)} --flash_size 16MB --elf-sha256-offset 0xb0 -o $TARGET $SOURCES
+Building .pio/build/dsh5-rev-e/firmware.bin
+esptool.py v4.9.0
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+========================= [SUCCESS] Took 7.96 seconds =========================
