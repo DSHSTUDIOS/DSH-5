@@ -14,7 +14,7 @@ Rev E puts the microcontroller, audio codec, display support, microSD and 3.3 V 
 | U14 and U3 | Onboard MCP2518FD CAN-FD controller and TCAN3413 PHY. This preserves the interface to the motor controller. |
 | J1 and J2 | USB-C PD charging and internal protected 3S battery. The USB-C connector supplies power. J19 provides the firmware service interface. |
 
-The GL30 motor, moteus-c1 controller and Pololu 12 V regulator remain chassis-mounted. The full BOM includes them. The Fallen CSV excludes the two ready-made chassis boards from the funding request. The bare OLED is a supplier quote item. Blank prices in the CSVs mark items that still need pricing.
+The GL30 motor, moteus-c1 controller and Pololu 12 V regulator remain chassis-mounted. The full BOM includes them. The Fallen CSV excludes the two ready-made chassis boards from the funding request. Every row has a USD price and a sourcing link. Listed prices and estimates are identified in the full BOM. The OLED price is a per-deck budget figure based on an 11-piece supplier minimum. The custom battery and harnesses have budget figures pending quotes. Parts subtotal is $345.72 per deck, or $246.77 for the Fallen BOM. These subtotals cover listed quantities before supplier order minimums, assembly labor, tax and shipping.
 
 ## Files
 
