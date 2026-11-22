@@ -14,7 +14,7 @@ Rev E puts the microcontroller, audio codec, display support, microSD and 3.3 V 
 | U14 and U3 | Onboard MCP2518FD CAN-FD controller and TCAN3413 PHY. This preserves the interface to the motor controller. |
 | J1 and J2 | USB-C PD charging and internal protected 3S battery. The USB-C connector supplies power. J19 provides the firmware service interface. |
 
-The GL30 motor, moteus-c1 controller and Pololu 12 V regulator remain chassis-mounted. The full BOM includes them. The Fallen CSV excludes the two ready-made chassis boards from the funding request. Every row has a USD price and a sourcing link. Listed prices and estimates are identified in the full BOM. The OLED price is a per-deck budget figure based on an 11-piece supplier minimum. The custom battery and harnesses have budget figures pending quotes. Parts subtotal is $345.72 per deck, or $246.77 for the Fallen BOM. These subtotals cover listed quantities before supplier order minimums, assembly labor, tax and shipping.
+The GL30 motor, moteus-c1 controller and Pololu 12 V regulator remain chassis-mounted. The full BOM includes them. The Fallen CSV excludes the two ready-made chassis boards from the funding request. Every row has a USD price and a sourcing link. Listed prices and estimates are identified in the full BOM. The OLED price is a per-deck budget figure based on an 11-piece supplier minimum. The custom battery and harnesses have budget figures pending quotes. The full budget is $602.63 and the Fallen budget is $503.68, including a $250.00 CNC enclosure allowance. These subtotals precede supplier order minimums, PCB and harness assembly labor, tax and shipping.
 
 ## Files
 
@@ -26,6 +26,12 @@ The GL30 motor, moteus-c1 controller and Pololu 12 V regulator remain chassis-mo
 ## Verification
 
 The schematic passed KiCad electrical checks. The PCB passed routing and schematic parity checks with zero errors and no unconnected items. KiCad flags the customized ESP32 antenna footprint because its placement rule allows the nearby unplated H2 mounting hole. The area still excludes pads, tracks, vias and copper pours. KiCad also reports an unterminated copper branch with continuity intact. The ESP32-S3 firmware compiled. Physical OLED fit, USB-C charging, audio and motor behavior still need first-article validation.
+
+## CNC enclosure
+
+Budget one CNC-machined chassis, front plate and rear cover. The allowance assumes 6061 aluminum with a standard machined finish. The enclosure STEP in the repository is from Rev D. Check the Rev E OLED, microSD, headphones, service access and antenna clearance in the enclosure before quoting the final case.
+
+The battery tray budget is 65 × 37 × 20 mm. The pack vendor needs to confirm the complete wrapped dimensions, wire exit and connector fit as well as cell balancing, 12.6 V charge termination, 1 A charge and at least 3 A continuous discharge. The BT1 link is for sourcing a custom configuration. [PCBWay CNC quote](https://www.pcbway.com/rapid-prototyping/)
 
 ## Turnkey assembly
 
